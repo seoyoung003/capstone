@@ -1,0 +1,126 @@
+:root {
+    /* COLORS */
+    --white: #ffffff;
+    --gray: #ededed;
+    --skyblue: #d4e7f4;
+    --blue: #275bdc;
+    --darkblue: #0f4ebb;
+    --navy: #011c89;
+    --red: #f00c0c;
+  
+    /* RADII */
+    --border-radius-button: 8px;
+    --border-radius-input: 9px;
+    --border-radius-container: 6px;
+  
+    /* SIZES */
+    font-size: 16px;
+
+  }
+
+
+
+/* 로그인 컨테이너 */
+.login-container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white); 
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+/* 로그인 폼 스타일*/
+.login-form{
+    width: 400px;   
+    max-width: 100%; 
+    height: 600px;  
+    max-height: 90%; 
+    background-color: var(--gray);
+    position: relative;
+    padding: 20px; /* 내부 여백 */
+    border-radius: var(--border-radius-container); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.login-form__title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.login-form__field{
+    display: flex;
+    flex-direction: column; 
+    gap: 16px; 
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.login-form__input{
+    width: 300px;
+    height: 36.8px;
+    border-radius: var(--border-radius-input);
+    border: none;
+    outline: none;
+    background-color: var(--skyblue);
+  
+}
+
+.login-form__submit-button{
+    width: 300px;
+    height: 43.2px;
+    border-radius: var(--border-radius-button);
+    background-color: var(--darkblue);
+    color: var(--white);
+    border: none;
+}
+
+
+.login-form__button-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-form__button{
+    width: 300px;
+    height: 30px;
+    color: var(--red);
+    background-color: var(--skyblue);
+    border-radius: var(--border-radius-button);
+    
+}
+
+.login-form__button--navy{
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+}
+
+
+
+.login-form__text-group{
+    margin-top: 10px;
+}
+
+.login-form__text--blue{
+    color: var(--blue);
+}
+
+.login-form__text--red{
+    color: var(--red);
+    text-decoration-line: underline;
+    font-size: 20px;
+    font-weight: 800;
+}
