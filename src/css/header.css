@@ -1,0 +1,41 @@
+.header-container {
+    margin: 0;
+    padding: 0;
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    
+}
+
+.header-container__logo{
+    width: 150px;
+    height: 60px;
+    margin: 10px 10px;
+}
+
+.header-container__user-info{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-container__user-info > p {
+    color: white;
+}
+
+.header-container__button{
+    width: 100px;
+    height: 40px;
+    margin: 10px 10px;
+    border-radius: 8px;
+    background-color: rgb(3, 3, 208);
+    color: white;
+   
+}
+
+

@@ -1,0 +1,17 @@
+.sidebar-btn-container{
+    width: 70px;
+    height: 25px;
+    background-color: navy;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.sidebar-btn-container > button {
+    color: white;
+    background-color: navy;
+    border: none;
+   
+}

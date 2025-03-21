@@ -1,0 +1,68 @@
+
+.sidebar{
+    
+    background-color: rgb(218, 216, 216);
+    width: 300px;
+    height: 100%;
+}
+
+.sidebar__user-info{
+    margin-left: 10px;
+}
+
+
+.sidebar__part{
+    display: flex;
+    margin: 10px 10px;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+   
+}
+
+.sidebar li{
+    list-style: none;
+    text-align: right; 
+    margin-right: 190px;
+}
+
+.sidebar__part__top {
+    display: flex;
+    margin: 10px 10px;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.sidebar__part__area{
+    display: flex;
+    margin: 10px 10px;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.sidebar__part--block{
+    display: block;
+    
+}
+
+.sidebar__part > select {
+    width: 150px;
+    height: 20px;
+}
+
+.sidebar__part__area > select{
+    width: 150px;
+    height: 20px;
+}
+
+.sidebar__part--marginleft {
+    margin-left: 50px;
+}
+
+
+
+
+
