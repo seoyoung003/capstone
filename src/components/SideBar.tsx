@@ -17,11 +17,6 @@ const SideBar: React.FC = () => {
                 <li>복</li>
                 <li>다</li>
                 <li>부</li>
-                <li>영어트랙</li>
-                <li>국어시험</li>
-                <li>물리시험</li>
-                <li>생물시험</li>
-                <li>수학시험</li>
             </ul>
         </div>
 
@@ -81,33 +76,7 @@ const SideBar: React.FC = () => {
           </div>
         </div>
            
-        <div className='sidebar__part'>
-        
-            <p>개인/전공실기</p>
-            <SideBarBtn/>
-        
-        </div> 
-
-        <div className='sidebar__part'>
-          
-            <p>학점교류강좌</p>
-            <SideBarBtn/>
-        
-        </div>
-
-        <div className='sidebar__part'>
-          
-            <p>재수강과목</p>
-            <SideBarBtn/>
-          
-        </div> 
-
-        <div className='sidebar__part'>
-         
-            <p>연계전공</p>
-            <SideBarBtn/>
-          
-        </div> 
+      
 
     </div>
   );
