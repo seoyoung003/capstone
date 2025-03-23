@@ -1,7 +1,12 @@
 import React from 'react';
 import "../css/Login.css"
+import { Link } from 'react-router-dom';
+
 
 const Login: React.FC = () => {
+
+    
+
   return (
     
         <div className='login-container'>
@@ -14,7 +19,7 @@ const Login: React.FC = () => {
                 </form>
 
                 <div className='login-form__button-group'>
-                    <button className='login-form__button login-form__button--navy'>아이디/비밀번호 찾기</button>
+                    <button className='login-form__button login-form__button--navy'><Link to={'/find-acount'}>아이디/비밀번호 찾기</Link></button>
                     <button className='login-form__button'>수강신청 화면설명</button>
                     <button className='login-form__button'>수강신청 유의사항 및 안내 보기</button>
 

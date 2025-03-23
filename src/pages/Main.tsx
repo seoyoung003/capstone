@@ -134,7 +134,126 @@ const Main: React.FC = () => {
   ]);
 
   const [myClassInfo, setMyClassInfoRows] = useState<MyClassInfo[]>([
-    
+    {
+      no: 1,
+      classification: "전공",
+      code: 10101,
+      credit: 3,
+      subject: "컴퓨터 기초",
+      professor: "김 교수",
+      class_time_room: "월 10:00~12:00, 101호",
+      lecture_type: "이론",
+      retake: "재수강",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "기초 프로그래밍",
+      application_date: "2025-03-01 09:00",
+    },
+    {
+      no: 2,
+      classification: "교양",
+      code: 20202,
+      credit: 2,
+      subject: "인문학 개론",
+      professor: "박 교수",
+      class_time_room: "화 14:00~16:00, 202호",
+      lecture_type: "세미나",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "인문학 개론",
+      application_date: "2025-03-01 10:00",
+    },
+    {
+      no: 3,
+      classification: "전공",
+      code: 20101,
+      credit: 4,
+      subject: "미적분학",
+      professor: "이 교수",
+      class_time_room: "수 09:00~11:00, 303호",
+      lecture_type: "이론",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "미적분학 I",
+      application_date: "2025-03-01 11:00",
+    },
+    {
+      no: 4,
+      classification: "전공",
+      code: 20202,
+      credit: 3,
+      subject: "자료구조",
+      professor: "최 교수",
+      class_time_room: "목 10:00~12:00, 105호",
+      lecture_type: "실습",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "자료구조",
+      application_date: "2025-03-01 12:00",
+    },
+    {
+      no: 5,
+      classification: "교양",
+      code: 10101,
+      credit: 3,
+      subject: "영어 회화",
+      professor: "정 교수",
+      class_time_room: "월 13:00~15:00, 110호",
+      lecture_type: "이론",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "영어 회화 I",
+      application_date: "2025-03-01 13:00",
+    },
+    {
+      no: 6,
+      classification: "전공",
+      code: 10301,
+      credit: 4,
+      subject: "물리학 I",
+      professor: "조 교수",
+      class_time_room: "화678, 202호",
+      lecture_type: "이론",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "물리학 I",
+      application_date: "2025-03-01 14:00",
+    },
+    {
+      no: 7,
+      classification: "교양",
+      code: 30301,
+      credit: 3,
+      subject: "심리학 개론",
+      professor: "김 교수",
+      class_time_room: "목234, 203호",
+      lecture_type: "세미나",
+      retake: "일반",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "심리학 개론",
+      application_date: "2025-03-01 15:00",
+    },
+    {
+      no: 8,
+      classification: "전공",
+      code: 30101,
+      credit: 3,
+      subject: "컴퓨터 네트워크",
+      professor: "하 교수",
+      class_time_room: "금 10:00~12:00, 304호",
+      lecture_type: "이론",
+      retake: "재수강",
+      acquired_year: "2025",
+      acquired_semester: "1학기",
+      acquired_subject_name: "컴퓨터 네트워크",
+      application_date: "2025-03-01 16:00",
+    },
   ]);
 
   
@@ -156,22 +275,22 @@ const Main: React.FC = () => {
         <SideBar/>
 
       <main className='main-container__content'>
-        <div className='main-container__content__title'>개설강좌 리스트 [{division}강좌조회] 2025년도 1학기</div>
+        <div className='main-container__content__title'><Diamond size={16}/> 개설강좌 리스트 [{division}강좌조회] 2025년도 1학기</div>
         <div className='main-container__content__subject-code'>
           <Diamond size={16}/> 수강신청 바로하기 [과목코드+분반]
-          <input type="text" /> <MainBtn content="신청"/>
+          <input type="text" /> <MainBtn content="신청" small={false}/>
         </div>
 
-        <div className='main-container__class-info-table'>
+        <div className='main-container__content__table'>
           <table>
             <thead>
               <tr>
-                <th>NO</th>
+                <th className='main-container__content__table__th--narrow'>NO</th>
                 <th></th>
                 <th>이수구분</th>
                 <th>과목코드-분반</th>
                 <th>학년</th>
-                <th>학점</th>
+                <th className='main-container__content__table__th--narrow'>학점</th>
                 <th>교과목명</th>
                 <th>담당교수</th>
                 <th>강의시간 및 강의실</th>
@@ -182,7 +301,7 @@ const Main: React.FC = () => {
               {classInfo.map((row, index) => (
                 <tr key={index}>
                   <td>{row.no}</td>
-                  <td><MainBtn content='신청'/></td>
+                  <td><MainBtn content='신청' small={false}/></td>
                   <td>{row.classification}</td>
                   <td>{row.code}</td>
                   <td>{row.grade}</td>
@@ -197,22 +316,22 @@ const Main: React.FC = () => {
       </table>
         </div>
 
-        <hr className='main-container__division'/>
-        <div>
+        <hr className='main-container__content__division'/>
+        <div className='main-container__content__title'>
           <Diamond size={16}/>
-          <div className='main-content__title'>수강신청내역</div>
+          <div>수강신청내역</div>
         </div>
         
 
-        <div className='main-container__my-class-table'>
+        <div className='main-container__content__table'>
           <table>
             <thead>
               <tr>
-                <th>NO</th>
+                <th className='main-container__content__table__th--narrow'>NO</th>
                 <th></th>
                 <th>이수구분</th>
                 <th>과목코드-분반</th>
-                <th>학점</th>
+                <th className='main-container__content__table__th--narrow'>학점</th>
                 <th>교과목명</th>
                 <th>담당교수</th>
                 <th>강의시간 및 강의실</th>
@@ -228,7 +347,7 @@ const Main: React.FC = () => {
               {myClassInfo.map((row, index) => (
                 <tr key={index}>
                   <td>{row.no}</td>
-                  <td><MainBtn content='취소'/></td>
+                  <td><MainBtn content='취소' small={true}/></td>
                   <td>{row.classification}</td>
                   <td>{row.code}</td>
                   <td>{row.credit}</td>
@@ -244,7 +363,14 @@ const Main: React.FC = () => {
                 </tr>
               ))}
             </tbody>
-      </table>
+          </table>
+        </div>
+
+        <div className='main-container__content__total-credit'>
+          <p>수강신청 학점 계 
+          {/* {total_credit} */}
+          </p>
+          
         </div>
 
        

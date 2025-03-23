@@ -2,10 +2,11 @@ import React from 'react';
 import SideBarBtn from './SideBarBtn';
 import "../css/sidebar.css"
 
+
 const SideBar: React.FC = () => {
   return (
     <div className='sidebar'>
-        <div>
+        <div className='sidebar__part--block'>
             <p className='sidebar__user-info'>사용자정보</p>
             <ul>
                 <li>년도/학기</li>

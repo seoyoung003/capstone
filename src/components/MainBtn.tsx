@@ -3,13 +3,12 @@ import "../css/main-btn.css"
 
 interface MainBtnProps{
     content: string,
+    small: boolean,
 }
 
-const MainBtn: React.FC<MainBtnProps> = ({content}) => {
+const MainBtn: React.FC<MainBtnProps> = ({content, small}) => {
   return (
-    <div>
-        <button className='main-btn'>{content}</button>
-    </div>
+        <button className={small ? 'main-btn--small' : 'main-btn'}>{content}</button>
   );
 };
 
