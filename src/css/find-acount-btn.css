@@ -1,0 +1,16 @@
+.find-account-btn{
+    width: 200px;
+    height: 60px;
+}
+
+.find-account-btn--bg-blue{
+    border: none;
+    color: white;
+    background-color: navy;
+}
+
+.find-account-btn--bg-white{
+    border: 1px solid navy;
+    color: navy;
+    background-color: white;
+}

@@ -4,8 +4,8 @@ import Header from '../components/Header';
 import "../css/main.css"
 import MainBtn from '../components/MainBtn';
 import { Diamond } from 'lucide-react';
-import { useEffect } from 'react';
-import axios from 'axios';
+// import { useEffect } from 'react';
+// import axios from 'axios';
 
 interface ClassInfo {
   no: number;
@@ -278,7 +278,7 @@ const Main: React.FC = () => {
         <div className='main-container__content__title'><Diamond size={16}/> 개설강좌 리스트 [{division}강좌조회] 2025년도 1학기</div>
         <div className='main-container__content__subject-code'>
           <Diamond size={16}/> 수강신청 바로하기 [과목코드+분반]
-          <input type="text" /> <MainBtn content="신청" small={false}/>
+          <input type="text" /> <MainBtn small={false}>신청</MainBtn>
         </div>
 
         <div className='main-container__content__table'>
@@ -301,7 +301,7 @@ const Main: React.FC = () => {
               {classInfo.map((row, index) => (
                 <tr key={index}>
                   <td>{row.no}</td>
-                  <td><MainBtn content='신청' small={false}/></td>
+                  <td><MainBtn small={false}>신청</MainBtn></td>
                   <td>{row.classification}</td>
                   <td>{row.code}</td>
                   <td>{row.grade}</td>
@@ -347,7 +347,7 @@ const Main: React.FC = () => {
               {myClassInfo.map((row, index) => (
                 <tr key={index}>
                   <td>{row.no}</td>
-                  <td><MainBtn content='취소' small={true}/></td>
+                  <td><MainBtn small={true}>취소</MainBtn></td>
                   <td>{row.classification}</td>
                   <td>{row.code}</td>
                   <td>{row.credit}</td>
